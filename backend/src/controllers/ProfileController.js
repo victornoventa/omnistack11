@@ -4,7 +4,7 @@ module.exports = {
     async index(request, response) {
         const ongId = request.headers.authorization;
 
-        const incidents = await connection('incidents')
+        const incidents = await connection('Incidents')
             .where('ong_id', ongId)
             .select('*');
 
